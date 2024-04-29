@@ -1,0 +1,113 @@
+<div class="container-fluid position-relative d-flex p-4 mx-auto" >
+
+    <div class="sidebar pe-4 pb-3" >
+        <nav class="navbar  navbar-dark" style="color: #4b556321;">
+            <a href="index.html" class="navbar-brand mx-4 mb-3">
+               <img src="assets/image/logo.png" alt="logo" style="width: 150px ; height: 100px;" >
+            </a>
+            <div class="d-flex align-items-center ms-4 mb-4">
+                <div class="position-relative">
+                    <img class="rounded-circle" src="assets/image/walla.jpg" alt="" style="width: 40px; height: 40px;">
+                    <div
+                        class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
+                    </div>
+                </div>
+                <div class="ms-3">
+                    <h6 class="mb-0">Jhon Doe</h6>
+                    <span>Responsable Financier</span>
+                </div>
+            </div>
+            <div class="navbar-nav w-100">
+                <a routerLink="/residents" class="nav-item nav-link">
+                    <div style="margin-left: -4px;"><i class="fa fa-users me-2"></i>Résidents</div>
+                </a>
+                
+
+                <!-- style="background-color: linear-gradient(98.24deg, #F39682 0.01%, #7446F7 100%);" -->
+                <a href="/residents" class="nav-item nav-link" routerLink="/residents"><i class="fa fa-user me-2"></i>residents</a>
+                <a href="/personnel" class="nav-item nav-link" routerLink="/personnel"><i class="fa fa-user-md me-2"></i>personnel</a>
+                <a href="/pharmacie" class="nav-item nav-link" routerLink="/pharmacie"><i class="fa-solid fa-prescription-bottle-medical"></i>Pharmacie</a>
+                <a href="/radiolog" class="nav-item nav-link" routerLink="/radiolog"><i class="fa-solid fa-x-ray"></i>Radiolog</a>
+                <a href="/laboratoire" class="nav-item nav-link" routerLink="/laboratoire"><i class="fa-solid fa-flask-vial"></i>Laboratoire</a>
+                <a href="/kine" class="nav-item nav-link" routerLink="/kine"><i class="fa-solid fa-spa"></i>kine</a>
+                <a href="/medecins" class="nav-item nav-link" routerLink="/medecins"><i class="fa-solid fa-stethoscope"></i>Médecins</a>
+                <a href="/loisirs" class="nav-item nav-link" routerLink="/loisirs"><i class="fa-solid fa-puzzle-piece"></i>Loisirs</a>
+                <a href="/frais-ospis" class="nav-item nav-link" routerLink="/frais-ospis"><i class="fa-solid fa-house"></i>Frais_OSPIS</a>
+
+                
+                
+            </div>
+        </nav>
+    </div>
+    <div class="content">
+        <br>
+
+        <H1 style="text-align: center; margin-left: 20px; margin-right: 300px;">Radiolog</H1>
+
+        <br>
+        
+        <table >
+            <thead>
+                <tr>
+                    <th style="width: 10%;">ID</th>
+                    <th style="width: 30%;" id="nom">Nom</th>
+                    <th style="width: 40%;">Consultation</th>
+                    <th style="width: 20%;">Etats</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>LEKHAL Aminatou</td>
+                
+                        
+                       
+                            <td>
+                                <button type="button" style="border: #4b556321;" [routerLink]="['/information-medicament']" [queryParams]="{ nomPatient: 'LEKHAL Aminatou' }">Consulter</button>
+                            </td>
+                            
+                     
+                        
+                   
+                    <td>
+                        
+                        <button type="button" (click)="changerEtatBouton($event)" [ngClass]="{ 'paye': etatBouton === 'Payé', 'attente': etatBouton === 'En attente' }" style="border: #4b556321;">{{ etatBouton }}</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>JANE Smith</td>
+                    <td>
+                        <button type="button" style="border: #4b556321;" [routerLink]="['/information-medicament']" [queryParams]="{ nomPatient: 'JANE Smith' }">Consulter</button>
+                    </td>
+                    <td>
+                        <button type="button" (click)="changerEtatBou($event)" [ngClass]="{ 'paye': etatBou === 'Payé', 'attente': etatBou === 'En attente' }" style="border: #4b556321;">{{ etatBou }}</button>
+                    </td>
+                
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>BOB Johnson</td>
+                    <td>
+                        <button type="button" style="border: #4b556321;" [routerLink]="['/information-medicament']" [queryParams]="{ nomPatient: 'BOB Johnson' }">Consulter</button>
+                    </td>
+                    <td>   
+                        <button type="button" (click)="changerEtat($event)" [ngClass]="{ 'paye': etat === 'Payé', 'attente': etat === 'En attente' }" style="border: #4b556321;">{{ etat }}</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+       
+        
+        
+
+
+
+
+          
+          
+    </div>
+    
+</div>
+
+

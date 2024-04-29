@@ -1,0 +1,33 @@
+ <br> <div class="d-flex justify-content-center">
+ 
+<h1>Informations sur les médicaments pour {{ nomPatient }}</h1>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>Nom du médicament</th>
+      <th>Date d'achat</th>
+      <th>Nombre de pièces</th>
+      <th>Prix</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let medicament of medicaments">
+      <td>{{ medicament.nom }}</td>
+      <td>{{ medicament.dateAchat }}</td>
+      <td>{{ medicament.nombrePieces }}</td>
+      <td>{{ medicament.prix }}</td>
+    </tr>
+    <tr>
+    <td>Total du prix des médicaments pour {{ nomPatient }} : </td>
+    <td></td>
+    <td></td>
+    <td>{{ getTotalPrix() }}</td>
+</tr>
+  </tbody>
+</table>
+
+
+<div class="d-flex justify-content-center">
+    <button type="button" style="border: #f2f5f921;"   (click)="retournerPagePersonnel()">Retour</button>
+  </div>

@@ -1,0 +1,38 @@
+table {
+    width: 90%;
+    margin: 100px;
+    border-collapse: separate;
+    border-spacing: 0; 
+    background-origin: padding-box;
+
+  
+
+}
+th, td {
+    padding: 8px;
+    text-align: center;
+    border: none ;
+}
+tr:nth-child(odd) td {
+    background-color: rgba(61, 90, 130, 0.287); /* Appliquer un fond coloré aux lignes impaires */
+}
+tr:first-child th {
+    border-top-color: transparent; /* Pas de bordure supérieure pour les éléments th dans la première ligne */
+}
+th:first-child,
+td:first-child {
+    border-left-color: transparent; /* Pas de bordure à gauche pour la première colonne */
+}
+th:last-child,
+td:last-child {
+    border-right-color: transparent; /* Pas de bordure à droite pour la dernière colonne */
+}
+tr:last-child th,
+tr:last-child td {
+    border-bottom-color: transparent; /* Pas de bordure inférieure pour les éléments th et td dans la dernière ligne */
+}
+button{
+    width: 50%;
+    border-radius: 20px;
+    align-items: center;
+}
